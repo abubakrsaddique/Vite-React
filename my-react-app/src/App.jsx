@@ -16,7 +16,7 @@ function App() {
   const { loading, user } = useContext(AuthContext);
 
   if (loading) {
-    // You can render a loading state here if authentication state is still loading
+   
     return <p>Loading...</p>;
   }
 
@@ -35,7 +35,7 @@ function App() {
               </PrivateRoute>
             ) : (
               <PublicRoute user={user}>
-                {/* You can redirect to a login page or handle the case where user is not logged in */}
+                
                 <Navigate to="/login" replace />
               </PublicRoute>
             )
